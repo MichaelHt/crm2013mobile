@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>CRM Mobile</title>
+    <link rel="stylesheet" href="crm2013mobile.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="http://www.sitoueb.fr/js/googleAnalytics.js"></script>
+    <script>
+        /*
+         $(document).live( 'pageinit',function(event) {
+         //$('#header').load('header.html');
+         $.mobile.loadPage("header.html");
+         });
+         $('div#ajaxdocumenttable').load('userdocumentlist.php', function(){
+         $("head").append('<link rel="stylesheet" type="text/css" href="css/style.css" />');
+         });
+         */
+
+    </script>
+</head>
+
+<body>
+<div data-role="page" id="homepage">
+    <!-- header -->
+    <div id="header" data-theme="a" data-role="header">
+        <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="#" data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Retour</a>
+        </div>
+        <h1>
+            CRM Mobile
+        </h1>
+        <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="gear">Parametres</a>
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="search">Rechercher</a>
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="delete">Deconnexion</a>
+        </div>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+        <ul data-role="listview" data-filter="true">
+            <li>
+                <a href='client.html?id=2'>
+                    <img src=''/>
+                    <h4>Micheng Jean</h4>
+                    <p>Mangeur de chevreuil</p>
+                    <span class='ui-li-count'>5</span>
+                </a>
+            </li>
+            <li>
+                <a href='client.html?id=2'>
+                    <img src=''/>
+                    <h4>Gator Ali</h4>
+                    <p>Eleveur de caillou</p>
+                    <span class='ui-li-count'>2</span>
+                </a>
+            </li>
+            <li>
+                <a href='client.html?id=2'>
+                    <img src=''/>
+                    <h4>Vador Dark</h4>
+                    <p>Dresseur de pokemon</p>
+                    <span class='ui-li-count'>1</span>
+                </a>
+            </li>
+            <li>
+                <a href='client.html?id=2'>
+                    <img src=''/>
+                    <h4>Bond Jean</h4>
+                    <p>Agent secret</p>
+                    <span class='ui-li-count'>5</span>
+                </a>
+            </li>
+            <li>
+                <a href='client.html?id=2'>
+                    <img src=''/>
+                    <h4>Wayne Bruce</h4>
+                    <p>Chauve souris</p>
+                    <span class='ui-li-count'>5</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+    <div data-role="footer">
+        <h4>CRM Mobile</h4>
+    </div>
+    --><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="dialogPage">
+    <div data-role="header">
+        <h2>Dialog</h2>
+    </div>
+    <div id="dialogresult" data-role="content">
+        <p>Error</p>
+    </div>
+</div>
+
+</body>
+</html>

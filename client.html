@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>Choose Your Destiny</title><!-- Choisi pour moi --> <!-- Pile ou face multiple -->
+    <link rel="stylesheet" href="crm2013mobile.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="http://www.sitoueb.fr/js/googleAnalytics.js"></script>
+    <script>
+
+
+        $("#homepage").live( 'pageinit',function(event) {
+            var currentchoice = 3;
+
+            // ADD CHOICE
+            $("#addchoice").tap(function () {
+                currentchoice++;
+                $('#choicecontainer')
+                        .append(
+                                $('<input/>', {
+                                    'type': 'text',
+                                    'name': 'choix' + currentchoice,
+                                    'id': 'choix' + currentchoice,
+                                    'value': '',
+                                    'placeholder': 'Choice ' + currentchoice,
+                                    'class': 'prefilled ui-input-text ui-body-c ui-corner-all ui-shadow-inset'
+                                })
+                        );
+                //$("#homepage").trigger('create');
+            });
+
+            // REMOVE CHOICE
+            $("#removechoice").tap(function () {
+                $('#choicecontainer').children('#choix' + currentchoice).remove();
+                if (currentchoice >= 1) {
+                    currentchoice--;
+                }
+                //$("#homepage").trigger('create');
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<div data-role="page" id="homepage">
+    <!--
+    <div data-role="header">
+        <a data-icon="arrow-l" data-rel="back" data-direction="reverse" href="#" data-theme="a" class="ui-btn-left">
+            Back
+        </a>
+        <a href="index.html" data-icon="delete" class="ui-btn-middle">Deconnexion</a>
+        <a href="index.html" data-icon="home" class="ui-btn-right">Home</a>
+    </div>
+    -->
+    <!-- header -->
+    <div data-theme="a" data-role="header">
+        <div class="ui-btn-left" data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="#" data-role="button" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Retour</a>
+        </div>
+        <h1>
+            CRM Mobile
+        </h1>
+        <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="gear">Parametres</a>
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="search">Rechercher</a>
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="delete">Deconnexion</a>
+        </div>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+
+
+        <img src="http://images.wikia.com/desencyclopedie/images/archive/e/e0/20100815154138!Darkvador-sm.jpg" class="employee-pic" width="100"/>
+        <div class="employee-details">
+            <h3>Dark Vador</h3>
+            <p>Jedi sombre, SM temps partiel</p>
+            <p>Tatooine</p>
+        </div>
+
+        <ul data-role="listview" data-inset="true" class="action-list">
+
+            <li>
+                <a href='employeedetails.php?id=$employee->managerId'>
+                    <h3>Contacts</h3>
+                    <p>M. Luc MarcheurDuCiel</p>
+                </a>
+            </li>
+
+            <li><a href='reportlist.php?managerId=$employee->id'><h3>View direct reports</h3><p>$employee->reportCount</p></a></li>
+            <li><a href='tel:$employee->officePhone'><h3>Call office</h3><p>051544884</p></a></li>
+            <li><a href='tel:$employee->cellPhone'><h3>Call cell</h3><p>$employee->cellPhone</p></a></li>
+            <li><a href='sms:$employee->cellPhone'><h3>SMS</h3><p>$employee->cellPhone</p></a></li>
+            <li><a href='mailto:$employee->email'><h3>Email</h3><p>$employee->email</p></a></li>
+        </ul>
+
+
+    </div><!-- /content -->
+
+    <!--
+    <div data-role="footer">
+        <h4>CRM Mobile</h4>
+    </div>
+    --><!-- /footer -->
+
+</div><!-- /page -->
+
+<div data-role="page" id="dialogPage">
+    <div data-role="header">
+        <h2>Dialog</h2>
+    </div>
+    <div id="dialogresult" data-role="content">
+        <p>Error</p>
+    </div>
+</div>
+
+</body>
+</html>
