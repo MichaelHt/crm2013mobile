@@ -74,39 +74,19 @@
     <!-- /header -->
     <div data-role="content">
 
-        <div style="display: block; height: 200px;">
-            <div style="float:left; width: 50%;">
-                <img src="entreprise.gif" class="employee-pic" width="100"/>
-                <div class="employee-details">
-                    <h3>Dupont SA</h3>
-                    <p>Constructeur de chèvrefeuille</p>
-                    <p>Montcuq</p>
-                </div>
-            </div>
-            <div style="float:left;">
-                <div><b>Siège</b></div>
-                <br />
-                <div>36 rue des lilas</div>
-                <div>59800	 Lille	 - Nord</div>
-                <div>Nord Pas de Calais	 - France</div>
-                <br />
-                <div><a href="mailto:contact@dupontsa.fr">contact@dupontsa.fr</a></div>
-            </div>
+
+        <img src="http://images.wikia.com/desencyclopedie/images/archive/e/e0/20100815154138!Darkvador-sm.jpg" class="employee-pic" width="100"/>
+        <div class="employee-details">
+            <h3>Dark Vador</h3>
+            <p>Constructeur de chèvrefeuille</p>
+            <p>Tatooine</p>
         </div>
 
         <ul data-role="listview" data-inset="true" class="action-list">
-
-            <li>
-                <a href='contact.html'>
-                    <h3>Contacts</h3>
-                    <p>M. Vador Dark</p>
-                </a>
-            </li>
-            <li><a href='tel:$employee->officePhone'><h3>Call office</h3><p>051544884</p></a></li>
-            <li><a href='liste_suivis.html'><h3>Suivis</h3><span class='ui-li-count'>9</span></a></li>
-            <li><a href='liste_rejets.html'><h3>Points de rejet</h3><span class='ui-li-count'>3</span></a></li>
-            <li><a href='liste_fichiers.html'><h3>Fichiers</h3><span class='ui-li-count'>1</span></a></li>
-            <li><a href='liste_etats.html'><h3>Etats</h3><span class='ui-li-count'>0</span></a></li>
+            <li><a href='tel:051544884'><h3>Call office</h3><p>051544884</p></a></li>
+            <li><a href='tel:0044789865'><h3>Call cell</h3><p>0044789865</p></a></li>
+            <li><a href='sms:0672727272'><h3>SMS</h3><p>0672727272</p></a></li>
+            <li><a href='mailto:$employee->email'><h3>Email</h3><p>dark.vador@deathstar.com</p></a></li>
         </ul>
 
 

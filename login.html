@@ -37,26 +37,27 @@
         <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal" data-mini="true">
             <a href="#" data-role="button" data-iconpos="notext" data-icon="gear">Parametres</a>
             <a href="#" data-role="button" data-iconpos="notext" data-icon="search">Rechercher</a>
-            <a href="#" data-role="button" data-iconpos="notext" data-icon="delete">Deconnexion</a>
+            <a href="login.html" data-role="button" data-iconpos="notext" data-icon="delete">Deconnexion</a>
         </div>
     </div>
     <!-- /header -->
-    <div data-role="content">
+    <div data-role="content" style="height: 500px;">
         <form id="cyd" method="post" data-transition="fade" action="index.html">
-        <div>
-            <label for="basic">Login:</label>
-            <input type="text" name="name" id="basic" value=""  />
-        </div>
-        <div>
-            <label for="basic">Password:</label>
-            <input type="password" name="password" id="password" value=""  />
-        </div>
-        <div>
-            <button data-role="button" type="submit" id="cydstart" name="submit" value="submit-value" data-theme="b" data-corners="false" data-icon="check" class="ui-btn-hidden" aria-disabled="false">
-                Submit
-            </button>
-        </div>
-            </form>
+            <div style="height: 100px;"></div>
+            <div style="height: 154px;">
+                <label for="basic">Login:</label>
+                <input type="text" name="name" id="basic" value=""  />
+            </div>
+            <div style="height: 200px;">
+                <label for="basic">Password:</label>
+                <input type="password" name="password" id="password" value=""  />
+            </div>
+            <div style="height: 100px;">
+                <button data-role="button" type="submit" id="cydstart" name="submit" value="submit-value" data-theme="b" data-corners="false" data-icon="check" class="ui-btn-hidden" aria-disabled="false">
+                    Submit
+                </button>
+            </div>
+        </form>
     </div><!-- /content -->
 
     <!--
